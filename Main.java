@@ -93,6 +93,9 @@ public class Main {
         // how many hyenas
         int currentNumOfHyenas = Hyena.getNumOfHyenas();
 
+        // Split the next group of words by a space.
+        String[] 
+
         System.out.println("\n The number pf hyenas is: " + currentNumOfHyenas + "\n\n");
 
         Hyena oneMore = new Hyena();
