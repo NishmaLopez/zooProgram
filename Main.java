@@ -1,112 +1,96 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+import java.time.*;
 
-// Main.java
-// Driver Class for the Zoo program
-// nL
-// 9/26/23
-
-import java.sql.SQLOutput;
 
 public class Main {
-
-    // Creating the genUniqueID method
-    private static String genUniqueID(String theSpecies, int numOfSpecies) {
-        String prefix = "";
-        int suffix = numOfSpecies + 1;
-
-
-        if (theSpecies.contains("hyena")) {
-            prefix = "Hy";
-        }
-
-        return prefix + Integer.valueOf(suffix)
-
-    }
-
-
-
-
     public static void main(String[] args) {
 
-        // Load all species classes with name.
-        // Call the static method to create a list of names
-        Lion.inputLionNames();
-        Tiger.inputTigerNames();
-        Bear.inputBearNames();
-        Hyena.inputHyenaNames();
+        System.out.printf("\n\nWelcome to my Zoo!\n\n");
+        Animal myAnimal = new Animal();
+        Animal mySecondAnimal = new Animal("some name", "hyena");
 
+        String aName = mySecondAnimal.name;
+        System.out.println("\n the animal name is: " + aName);
 
-        // Open CSV
+        // Create a hyena
+        Hyena myHyena = new Hyena();
 
+        // Look at the new Hyena object
+        System.out.println("\n The hyena name is: " + myHyena.name);
 
+        // Create a hyena with a name and a species
+        Hyena aNewHyena = new Hyena("Zig","hyena");
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
-            while ((myFileLine = reader.readLine()) != null {
-                String[] myArray = myFileLine.split(",");
+        System.out.println(" \n the name of my hyena is: " + aNewHyena.name);
 
-                String myStr = myArray[0];
-                System.out.println("\n my Str = " + myStr);
-                myArray = myStr.split(" ");
-                String mySpecies = myArray[4];
-                System.out.println(" Species is: " + mySpecies);
-                System.out.println("\n myStr = " + myStr);
+        // Get today's date
+        LocalDate
 
-                
-            }
+        String myAnimalBD = ""
+
+        if (birthSeason.contains("spring")) {
+            myAnimalBD = "Mar 21, " + animalsYearOfBirthDate;
+        }
+        else if (birthSeason.contains("fall")) {
+            myAnimalBD = "Sep 21, " + animalsYearFoBirthDate;
+        }
+        else if (birthSeason.contains("unknown")) {
+            myAnimalBD = "Jan 1, " + animalsYearFoBirthDate;
+        }
+        else if (birthSeason.contains("winter")) {
+            myAnimalBD = "Sep 21, " + animalsYearFoBirthDate;
+        }
+        else if (birthSeason.contains("summer")) {
+            myAnimalBD = "Jun 21, " + animalsYearFOBirthDate;
+        }
+        else {
+            myAnimalBD = "unable to process" + animalsYearFoBirthDate;
         }
 
-        // Show the bear names:
-        Bear.listOut();
+        System.out.println("\n\n Animal birth date is " + myAnimalBD + "\n\n");
+
+        // Subtract 4 years
+        calendar.add(Calendar.YEAR, - Integer.parseInt(myArrayOfGnderSpecies[0]) );
+
+        // Get the new date after subtraction
+        Date yearsAgo = calendar.getTime();
+
+        // Code up calculating the animal's age
+        // Animal age = now - animal birthdate
+        // We must create dateTime objects so we can do math on them
+
+        // 1) Create a DateTime for "Jan 1, 2017"
+        // this will be the birthdate
+       // LocalDate myDate = LocalDate.of(2017, month, day);
+        //  this doesn't work
+        //LocalDate myDate = localDate.of(myAnimalBD);
+        //LocalDate myDate = parseCustomDate
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+
+        LocalDate myBirthdayTest = LocalDate.parse(myAnimalBD, formatter);
+
+        System.out.println("\n myDate is: " + myBirthdayTest);
 
 
-        // Pop a name from the hyena list:
-        String myName = Bear.popBearName();
-        myName = Bear.popBearName();
-        myName = Bear.popBearName();
+        // This was the code done in class on Oct 
 
-        System.out.println("\n the popped bear name is: " + myName);
+        // Calculate animal age using local date objects
+        LocalDate myNow = LocalDate.now();
+        LocalDate myAnimalAge = myBirthdayTest - myNow. ;
 
-
-        System.out.println("\n Welcome to my Zoo!!");
-
-        // Look at our animalNames file!
-        // call inputHyenaNames()
-
-        Hyena.inputHyenaNames();
+        System.out.println("\n The animal's age is: " + myAnimalAge);
 
 
-        // Create a Hyena object.
-        Hyena myNewHyena = new Hyena();
 
-        System.out.println("\n Number of animals is " + myNewHyena.getNumOfAnimals() );
-        System.out.println("\n Number of hyenas: " + myNewHyena.getNumOfHyenas());
 
-        Hyena anotherHyena = new Hyena();
+        // Print the original and new dates
+        System.out.println("Today's Date: " + today);
+        System.out.println("Date " + myArrayOfAgeGenderSpecies[1] + " years ago: ");
 
-        System.out.println("\n Number of Animals is " + myNewHyena.getNumOfAnimals() );
-        System.out.println("\n Number of Hyenas: " + anotherHyena.getNumOfHyenas);
-
-        // how many hyenas
-        int currentNumOfHyenas = Hyena.getNumOfHyenas();
-
-        // Split the next group of words by a space.
-        String[] 
-
-        System.out.println("\n The number pf hyenas is: " + currentNumOfHyenas + "\n\n");
-
-        Hyena oneMore = new Hyena();
-
-        oneMore.setAnimalID("Hy09");
-
-        oneMore.setAnimalColor("yellow spots");
-
-        System.out.println();
-
-        System.out.println("\n The id of oneMore is " + oneMore.getAnimalID());
 
 
 
